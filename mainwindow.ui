@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>15</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(85, 85, 85)
+qconicalgradient(cx:0.511, cy:0.505818, angle:307.5, stop:0 rgba(85, 85, 85, 255), stop:1 rgba(255, 255, 255, 255))</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="btn_submit">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>240</y>
+      <width>180</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(119, 119, 170);
+background-color: rgb(202, 202, 202);
+botfer: 2px solid gb(34, 34, 34);
+font-weight: 900;</string>
+    </property>
+    <property name="text">
+     <string>Abesenden</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_ip_adresse">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>100</y>
+      <width>120</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgb(64, 64, 102);</string>
+    </property>
+    <property name="text">
+     <string>IP-Adresse:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ln_edt_ip">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>100</y>
+      <width>180</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(34, 34, 34);
+background-color:rgb(202, 202, 202);
+border-radius: 3px;
+vorder: 3px solid #77a;</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="list_out">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>320</y>
+      <width>201</width>
+      <height>200</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(34, 34, 34);
+background-color:rgb(202, 202, 202);</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_netzanteil">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>150</y>
+      <width>120</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(119, 119, 170);</string>
+    </property>
+    <property name="text">
+     <string>Netzanteil:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ln_edt_netzanteil">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>150</y>
+      <width>180</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(34, 34, 34);
+background-color:rgb(202, 202, 202);
+border-radius: 3px;
+vorder: 10px solid #77a;</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="list_out_2">
+    <property name="geometry">
+     <rect>
+      <x>259</x>
+      <y>320</y>
+      <width>511</width>
+      <height>200</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(34, 34, 34);
+background-color:rgb(202, 202, 202);</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_subnet_mask">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>100</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(119, 119, 170);</string>
+    </property>
+    <property name="text">
+     <string>Subnetz Maske:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_net_id">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>150</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(119, 119, 170);</string>
+    </property>
+    <property name="text">
+     <string>Net ID:</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="list_net_id">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>150</y>
+      <width>180</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(34, 34, 34);
+background-color:rgb(202, 202, 202);
+border-radius: 3px;</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="list_subnet_mask">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>100</y>
+      <width>180</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(34, 34, 34);
+background-color:rgb(202, 202, 202);
+border-radius: 3px;</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
