@@ -26,20 +26,6 @@ void MainWindow::on_btn_submit_clicked()
     A.set_netzanteil(u_netzanteil);
     A.output();
 
-
-    // Output GUI unten Links
-    ui->list_out->setHtml(A.get_bin_out(0)+" - "+QString::number(A.get_array(0))+"<br>"
-                          +A.get_bin_out(1)+" - "+QString::number(A.get_array(1))+"<br>"
-                          +A.get_bin_out(2)+" - "+QString::number(A.get_array(2))+"<br>"
-                          +A.get_bin_out(3)+" - "+QString::number(A.get_array(3))+"<br>");
-
-
-    // Output GUI unte Rechts
-    ui->list_out_2->setHtml("IP Addresse Binär: <br>"+A.get_total_bin_complete()
-                            +"<br> Subnetzmaske Binär: <br>"+A.get_subnet_mask()+"<br> NET ID Binär: <br>"+A.get_net_ID()
-                            +"<br> Inv Subnetzmaske Binär: <br>"+ A.get_inv_subnet_mask()+"<br> Broadcast Binär: <br>"+A.get_broadcast()
-                            /*+"<br>"+"<br>"+A.out_numbers()*/);
-
     // Output GUI Net ID:
     ui->list_net_id->setHtml(A.get_dez_conv_net_id());
 
