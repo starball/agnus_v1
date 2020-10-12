@@ -27,6 +27,7 @@ public:
     int get_netzanteil();
 
     void fill_subnet_mask();
+    QString get_subnet_mask();
 
     void set_total_bin();
     QString get_total_bin(int index);
@@ -34,16 +35,21 @@ public:
     void fill_total_bin_complete();
     QString get_total_bin_complete();
 
-    QString get_subnet_mask();
-
     void set_net_ID();
     QString get_net_ID();
 
     void to_dez(QString bin_dez); // wandelt bin in dez
 
     QString get_dez_conv_net_id();
-
     QString get_dez_conv_subnet_mark();
+    QString get_dez_conv_inv_subnet_mask();
+    QString get_dez_conv_braodcast();
+
+    void fill_inv_subnet_mask();
+    QString get_inv_subnet_mask();
+
+    void set_broadcast();
+    QString get_broadcast();
 
 private:
     QString ip_adresse;
@@ -52,8 +58,10 @@ private:
     QString total_bin_complete;
 
     QString subnetz_maske;
+    QString inv_subnetz_maske;
 
     QString net_ID;
+    QString broadcast;
 
     QString dez_conv;
 

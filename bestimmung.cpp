@@ -115,6 +115,12 @@ void bestimmung::output()
     fill_subnet_mask();                     // Füllt Subnetz Maske mit "0" / "1" anhand von Netzanteil
 
     set_net_ID();                           // Setz Net ID anhand von Subnetzmaske und Total Bin
+
+    fill_inv_subnet_mask();
+
+    set_broadcast();
+
+
 }
 
 // Setz Netzanteil
@@ -240,18 +246,13 @@ void bestimmung::to_dez(QString bin_dez)
         for(int potenz = 7; potenz >= 0; potenz--)          // Fängt bei 2^7 an und geht herunter
         {                                                   // da 128 / 64 / 32 / 16 / 8 / 4 / 2 / 1
             part_string = umwandeln[index];                 // Multipliziert dann char für char mit x Potenz von 2
-            qInfo() << "Bin: "<< part_string;
             if(part_string != '0')
             {
                 part_dez += pow(2,potenz);
-                qInfo() << "Potenz :"<< pow(2,potenz);
             }
             index++;
         }
         this->dez_conv.append(QString::number(part_dez));   // Convertierte Zahlen werden an Variable übergeben
-
-        // Debug: qInfo() << "\n";
-
         if(i < 3)                                           // Fügt "." hinzu
         {
             this->dez_conv.append(".");
@@ -272,5 +273,70 @@ QString bestimmung::get_dez_conv_subnet_mark()
 {
     this->dez_conv = "";
     to_dez(subnetz_maske);
+    return this->dez_conv;
+}
+
+void bestimmung::fill_inv_subnet_mask()
+{
+    int anteil = get_netzanteil();
+
+    for(int i = 0; i < anteil; i++)         // Alles bis angebenem Netzanteil wird "1" gesetzt
+    {
+        this->inv_subnetz_maske.append("0");
+    }
+
+    for(int i = anteil;i < 32; i++)         // Alles danach wird "0" gesetzt
+    {
+        this->inv_subnetz_maske.append("1");
+    }
+}
+
+QString bestimmung::get_inv_subnet_mask()
+{
+    return this->inv_subnetz_maske;
+}
+
+QString bestimmung::get_dez_conv_inv_subnet_mask()
+{
+    this->dez_conv = "";
+    to_dez(inv_subnetz_maske);
+    return this->dez_conv;
+}
+
+void bestimmung::set_broadcast()
+{
+    QString mask = get_inv_subnet_mask();
+
+    QString bin = get_total_bin_complete();
+
+    int anteil = get_netzanteil();
+
+    for(int i = 0; i < anteil; i++)
+    {
+        if(bin[i] == "1")
+        {
+            this->broadcast.append("1");
+        }
+        else {
+            this->broadcast.append("0");
+        }
+    }
+
+    for(int i = anteil; i < 32; i++)         // Solange i kleiner ist als netzanteil wird verglichen
+    {
+        this->broadcast.append("1");
+        // Debug: qInfo() << "I: "<< i << "mask " << mask[i] << " | bin " << bin[i] << "-> 1";
+    }
+}
+
+QString bestimmung::get_broadcast()
+{
+    return this->broadcast;
+}
+
+QString bestimmung::get_dez_conv_braodcast()
+{
+    this->dez_conv = "";
+    to_dez(broadcast);
     return this->dez_conv;
 }

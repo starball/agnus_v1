@@ -37,12 +37,19 @@ void MainWindow::on_btn_submit_clicked()
     // Output GUI unte Rechts
     ui->list_out_2->setHtml("IP Addresse Binär: <br>"+A.get_total_bin_complete()
                             +"<br> Subnetzmaske Binär: <br>"+A.get_subnet_mask()+"<br> NET ID Binär: <br>"+A.get_net_ID()
+                            +"<br> Inv Subnetzmaske Binär: <br>"+ A.get_inv_subnet_mask()+"<br> Broadcast Binär: <br>"+A.get_broadcast()
                             /*+"<br>"+"<br>"+A.out_numbers()*/);
 
-    // Output GUI Subnetz Maske
+    // Output GUI Net ID:
     ui->list_net_id->setHtml(A.get_dez_conv_net_id());
 
-    // Output GUI Net ID:
+    // Output GUI Subnetz Maske
     ui->list_subnet_mask->setHtml(A.get_dez_conv_subnet_mark());
+
+    // Output GUI Inv Subnetz Maske
+    ui->list_inv_subnetz_maske->setHtml(A.get_dez_conv_inv_subnet_mask());
+
+    // Output GUI Broadcast
+    ui->list_braodcast->setHtml(A.get_dez_conv_braodcast());
 }
 

@@ -57,7 +57,7 @@ font-weight: 900;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:rgb(64, 64, 102);</string>
+     <string notr="true">color: rgb(119, 119, 170);</string>
     </property>
     <property name="text">
      <string>IP-Adresse:</string>
@@ -93,7 +93,7 @@ vorder: 3px solid #77a;</string>
       <x>30</x>
       <y>320</y>
       <width>201</width>
-      <height>200</height>
+      <height>231</height>
      </rect>
     </property>
     <property name="font">
@@ -154,7 +154,7 @@ vorder: 10px solid #77a;</string>
       <x>259</x>
       <y>320</y>
       <width>511</width>
-      <height>200</height>
+      <height>231</height>
      </rect>
     </property>
     <property name="font">
@@ -247,6 +247,88 @@ border-radius: 3px;</string>
      <string notr="true">color: rgb(34, 34, 34);
 background-color:rgb(202, 202, 202);
 border-radius: 3px;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_inv_subnetz_maske">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>200</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(119, 119, 170);</string>
+    </property>
+    <property name="text">
+     <string>Inv. Subnetz Maske:</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="list_inv_subnetz_maske">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>200</y>
+      <width>180</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(34, 34, 34);
+background-color:rgb(202, 202, 202);
+border-radius: 3px;</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="list_braodcast">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>250</y>
+      <width>180</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(34, 34, 34);
+background-color:rgb(202, 202, 202);
+border-radius: 3px;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_boradcast">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>250</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(119, 119, 170);</string>
+    </property>
+    <property name="text">
+     <string>Broadcast:</string>
     </property>
    </widget>
   </widget>
