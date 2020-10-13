@@ -51,6 +51,9 @@ public:
     void set_broadcast();
     QString get_broadcast();
 
+    void count_hosts();
+    int get_counted_hosts();
+
 private:
     QString ip_adresse;
     QString bin_out[4];
@@ -69,6 +72,8 @@ private:
     int array_size;
 
     int netzanteil;
+
+    int counted_hosts;
 
 };
 

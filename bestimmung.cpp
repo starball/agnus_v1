@@ -109,6 +109,8 @@ void bestimmung::output()
     set_bin_out(to_bin(array[2]),2);
     set_bin_out(to_bin(array[3]),3);
 
+    count_hosts();
+
     set_total_bin();                        // Macht aus den 4 Binär Blöcken ein String (Array to String)
     fill_total_bin_complete();              // Macht aus den den vier Blöcken ein String (Array -> String)
 
@@ -276,26 +278,29 @@ QString bestimmung::get_dez_conv_subnet_mark()
     return this->dez_conv;
 }
 
+// Füllt Invertiert Subnetz Maskse mit 0 / 1 nach dem Netzanteil
 void bestimmung::fill_inv_subnet_mask()
 {
     int anteil = get_netzanteil();
 
-    for(int i = 0; i < anteil; i++)         // Alles bis angebenem Netzanteil wird "1" gesetzt
+    for(int i = 0; i < anteil; i++)         // Alles bis angebenem Netzanteil wird "0" gesetzt
     {
         this->inv_subnetz_maske.append("0");
     }
 
-    for(int i = anteil;i < 32; i++)         // Alles danach wird "0" gesetzt
+    for(int i = anteil;i < 32; i++)         // Alles danach wird "1" gesetzt
     {
         this->inv_subnetz_maske.append("1");
     }
 }
 
+// Gibt invertierte Subnetz Maske zurpck
 QString bestimmung::get_inv_subnet_mask()
 {
     return this->inv_subnetz_maske;
 }
 
+// Gibt deziaml convertierte invertierte Subentz Maske zurück
 QString bestimmung::get_dez_conv_inv_subnet_mask()
 {
     this->dez_conv = "";
@@ -303,6 +308,7 @@ QString bestimmung::get_dez_conv_inv_subnet_mask()
     return this->dez_conv;
 }
 
+// Setz Broadcast
 void bestimmung::set_broadcast()
 {
     QString mask = get_inv_subnet_mask();
@@ -311,7 +317,7 @@ void bestimmung::set_broadcast()
 
     int anteil = get_netzanteil();
 
-    for(int i = 0; i < anteil; i++)
+    for(int i = 0; i < anteil; i++)         // Was vor dem dem netzteil "1" ist wird "1"
     {
         if(bin[i] == "1")
         {
@@ -322,21 +328,36 @@ void bestimmung::set_broadcast()
         }
     }
 
-    for(int i = anteil; i < 32; i++)         // Solange i kleiner ist als netzanteil wird verglichen
+    for(int i = anteil; i < 32; i++)         // Alles nachdem Netzanteil wird "1"
     {
         this->broadcast.append("1");
-        // Debug: qInfo() << "I: "<< i << "mask " << mask[i] << " | bin " << bin[i] << "-> 1";
     }
 }
 
+// Gibt Broadcast zurück
 QString bestimmung::get_broadcast()
 {
     return this->broadcast;
 }
 
+// Gibt deziaml convertierten Broadcast zurück
 QString bestimmung::get_dez_conv_braodcast()
 {
     this->dez_conv = "";
     to_dez(broadcast);
     return this->dez_conv;
+}
+
+// Bestimmt mögliche Hosts im Netz
+void bestimmung::count_hosts()
+{
+    int potenz = 32 - get_netzanteil();
+
+    this->counted_hosts = pow(2,potenz);
+}
+
+// Gibt Mögliche Hosts zurück
+int bestimmung::get_counted_hosts()
+{
+    return this->counted_hosts;
 }

@@ -37,5 +37,7 @@ void MainWindow::on_btn_submit_clicked()
 
     // Output GUI Broadcast
     ui->list_braodcast->setHtml(A.get_dez_conv_braodcast());
+
+    ui->list_counted_hosts->setHtml(QString::number(A.get_counted_hosts()));
 }
 
