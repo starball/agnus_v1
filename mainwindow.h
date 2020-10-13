@@ -16,7 +16,8 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_btn_submit_clicked();
+
+    void on_ln_edt_netzanteil_returnPressed();
 
 private:
     Ui::MainWindow *ui;

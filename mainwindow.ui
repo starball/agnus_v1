@@ -22,284 +22,21 @@
    <string notr="true">background-color: rgb(40, 42, 54);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="btn_submit">
-    <property name="geometry">
-     <rect>
-      <x>400</x>
-      <y>170</y>
-      <width>180</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(139, 233, 253);
-background-color: rgb(68, 71, 90);
-botfer: 2px solid gb(34, 34, 34);
-font-weight: 900;</string>
-    </property>
-    <property name="text">
-     <string>Abesenden</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="lbl_ip_adresse">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>140</y>
-      <width>120</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:rgb(80, 250, 123);</string>
-    </property>
-    <property name="text">
-     <string>IP-Adresse:</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="ln_edt_ip">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>140</y>
-      <width>180</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(34, 34, 34);
-background-color:rgb(202, 202, 202);
-border-radius: 3px;
-vorder: 3px solid #77a;</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="lbl_netzanteil">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>190</y>
-      <width>120</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:rgb(80, 250, 123);</string>
-    </property>
-    <property name="text">
-     <string>Netzanteil:</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="ln_edt_netzanteil">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>190</y>
-      <width>180</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(34, 34, 34);
-background-color:rgb(202, 202, 202);
-border-radius: 3px;
-vorder: 10px solid #77a;</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="lbl_subnet_mask">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>390</y>
-      <width>141</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:rgb(80, 250, 123);</string>
-    </property>
-    <property name="text">
-     <string>Subnetz Maske:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="lbl_net_id">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>490</y>
-      <width>141</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:rgb(80, 250, 123);</string>
-    </property>
-    <property name="text">
-     <string>Net ID:</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="list_net_id">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>490</y>
-      <width>180</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(34, 34, 34);
-background-color:rgb(202, 202, 202);
-border-radius: 3px;</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="list_subnet_mask">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>390</y>
-      <width>180</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(34, 34, 34);
-background-color:rgb(202, 202, 202);
-border-radius: 3px;</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="lbl_inv_subnetz_maske">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>340</y>
-      <width>190</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:rgb(80, 250, 123);</string>
-    </property>
-    <property name="text">
-     <string>Inv. Subnetz Maske:</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="list_inv_subnetz_maske">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>340</y>
-      <width>180</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(34, 34, 34);
-background-color:rgb(202, 202, 202);
-border-radius: 3px;</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="list_braodcast">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>440</y>
-      <width>180</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(34, 34, 34);
-background-color:rgb(202, 202, 202);
-border-radius: 3px;</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="lbl_boradcast">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>440</y>
-      <width>141</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:rgb(80, 250, 123);</string>
-    </property>
-    <property name="text">
-     <string>Broadcast:</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>30</y>
+      <y>40</y>
       <width>900</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 85, 85);
@@ -312,46 +49,369 @@ font-size: 30px;</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="lbl_net_id_2">
+   <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>340</y>
-      <width>180</width>
-      <height>31</height>
+      <x>40</x>
+      <y>120</y>
+      <width>821</width>
+      <height>501</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-     </font>
+    <property name="toolTipDuration">
+     <number>5</number>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:rgb(80, 250, 123);</string>
+     <string notr="true">background-color: rgb(68, 71, 90);</string>
     </property>
-    <property name="text">
-     <string>Mögliche Hosts:</string>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
     </property>
-   </widget>
-   <widget class="QTextEdit" name="list_counted_hosts">
-    <property name="geometry">
-     <rect>
-      <x>680</x>
-      <y>340</y>
-      <width>180</width>
-      <height>30</height>
-     </rect>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(34, 34, 34);
+    <widget class="QTextEdit" name="list_inv_subnetz_maske">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>280</y>
+       <width>180</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(34, 34, 34);
 background-color:rgb(202, 202, 202);
 border-radius: 3px;</string>
-    </property>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_Ausgabe">
+     <property name="geometry">
+      <rect>
+       <x>23</x>
+       <y>230</y>
+       <width>120</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <underline>false</underline>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(139, 233, 253);
+</string>
+     </property>
+     <property name="text">
+      <string>Ausgabe:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ln_edt_netzanteil">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>80</y>
+       <width>180</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(34, 34, 34);
+background-color:rgb(202, 202, 202);
+border-radius: 3px;
+vorder: 10px solid #77a;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_ip_adresse">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>80</y>
+       <width>120</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(80, 250, 123);</string>
+     </property>
+     <property name="text">
+      <string>IP-Adresse:</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="list_braodcast">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>380</y>
+       <width>180</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(34, 34, 34);
+background-color:rgb(202, 202, 202);
+border-radius: 3px;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_counted_hosts">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>280</y>
+       <width>180</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(80, 250, 123);</string>
+     </property>
+     <property name="text">
+      <string>Mögliche Hosts:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_subnet_mask">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>330</y>
+       <width>141</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(80, 250, 123);</string>
+     </property>
+     <property name="text">
+      <string>Subnetz Maske:</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="list_counted_hosts">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>280</y>
+       <width>180</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(34, 34, 34);
+background-color:rgb(202, 202, 202);
+border-radius: 3px;</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ln_edt_ip">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>80</y>
+       <width>180</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(34, 34, 34);
+background-color:rgb(202, 202, 202);
+border-radius: 3px;
+vorder: 3px solid #77a;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_net_id">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>430</y>
+       <width>141</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(80, 250, 123);</string>
+     </property>
+     <property name="text">
+      <string>Net ID:</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="list_net_id">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>430</y>
+       <width>180</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(34, 34, 34);
+background-color:rgb(202, 202, 202);
+border-radius: 3px;</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="list_subnet_mask">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>330</y>
+       <width>180</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(34, 34, 34);
+background-color:rgb(202, 202, 202);
+border-radius: 3px;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_inv_subnetz_maske">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>280</y>
+       <width>190</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(80, 250, 123);</string>
+     </property>
+     <property name="text">
+      <string>Inv. Subnetz Maske:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_boradcast">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>380</y>
+       <width>141</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(80, 250, 123);</string>
+     </property>
+     <property name="text">
+      <string>Broadcast:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_netzanteil">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>80</y>
+       <width>120</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(80, 250, 123);</string>
+     </property>
+     <property name="text">
+      <string>Netzanteil:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_Eingabe">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>119</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <underline>false</underline>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(139, 233, 253);
+</string>
+     </property>
+     <property name="text">
+      <string>Eingabe:</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -366,6 +426,15 @@ border-radius: 3px;</string>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <tabstops>
+  <tabstop>ln_edt_ip</tabstop>
+  <tabstop>ln_edt_netzanteil</tabstop>
+  <tabstop>list_inv_subnetz_maske</tabstop>
+  <tabstop>list_subnet_mask</tabstop>
+  <tabstop>list_braodcast</tabstop>
+  <tabstop>list_net_id</tabstop>
+  <tabstop>list_counted_hosts</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

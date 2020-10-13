@@ -14,7 +14,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_btn_submit_clicked()
+void MainWindow::on_ln_edt_netzanteil_returnPressed()
 {
     // Input GUI IP-Adresse / Netzanteil
     QString u_eingabe = ui->ln_edt_ip->text();
@@ -38,6 +38,6 @@ void MainWindow::on_btn_submit_clicked()
     // Output GUI Broadcast
     ui->list_braodcast->setHtml(A.get_dez_conv_braodcast());
 
+    // Output GUI Mögliche Hosts
     ui->list_counted_hosts->setHtml(QString::number(A.get_counted_hosts()));
 }
-
