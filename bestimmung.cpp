@@ -121,8 +121,6 @@ void bestimmung::output()
     fill_inv_subnet_mask();
 
     set_broadcast();
-
-
 }
 
 // Setz Netzanteil
@@ -211,11 +209,13 @@ void bestimmung::set_net_ID()
         if(mask[i] == bin[i])               // Wenn char von Maske und Bin "1" sind wird 1 angehängt
         {
             this->net_ID.append("1");
+            this->first_host.append(("1"));
             // Debug: qInfo() << "I: "<< i << "mask " << mask[i] << " | bin " << bin[i] << "-> 1";
         }
         else
         {
-            this->net_ID.append("0");       // Wenn nicht dann "0"
+            this->net_ID.append("0");
+            this->first_host.append(("0"));// Wenn nicht dann "0"
             // Debug: qInfo() << "I: "<< i << "mask " << mask[i] << " | bin " << bin[i] << "-> 0";
         }
     }
@@ -223,6 +223,13 @@ void bestimmung::set_net_ID()
     for(int i = this->netzanteil; i < 32; i++) // Der Rest wird mit "0" aufgefüllt
     {
         this->net_ID.append("0");
+        if(i < 31) {
+            this->first_host.append(("0"));
+        }
+        else
+        {
+            this->first_host.append(("1"));
+        }
     }
 }
 
@@ -255,6 +262,7 @@ void bestimmung::to_dez(QString bin_dez)
             index++;
         }
         this->dez_conv.append(QString::number(part_dez));   // Convertierte Zahlen werden an Variable übergeben
+
         if(i < 3)                                           // Fügt "." hinzu
         {
             this->dez_conv.append(".");
@@ -322,15 +330,24 @@ void bestimmung::set_broadcast()
         if(bin[i] == "1")
         {
             this->broadcast.append("1");
+            this->last_host.append(("1"));
         }
         else {
             this->broadcast.append("0");
+            this->last_host.append(("0"));
         }
     }
 
     for(int i = anteil; i < 32; i++)         // Alles nachdem Netzanteil wird "1"
     {
         this->broadcast.append("1");
+        if(i < 31)
+        {
+            this->last_host.append(("1"));
+        }
+        else {
+            this->last_host.append(("0"));
+        }
     }
 }
 
@@ -353,11 +370,25 @@ void bestimmung::count_hosts()
 {
     int potenz = 32 - get_netzanteil();
 
-    this->counted_hosts = pow(2,potenz);
+    this->counted_hosts = pow(2,potenz) - 2;
 }
 
 // Gibt Mögliche Hosts zurück
 int bestimmung::get_counted_hosts()
 {
     return this->counted_hosts;
+}
+
+QString bestimmung::get_dez_conv_first_host()
+{
+    this->dez_conv = "";
+    to_dez(first_host);
+    return this->dez_conv;
+}
+
+QString bestimmung::get_dez_conv_last_host()
+{
+    this->dez_conv = "";
+    to_dez(last_host);
+    return this->dez_conv;
 }

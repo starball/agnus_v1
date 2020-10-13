@@ -40,4 +40,9 @@ void MainWindow::on_ln_edt_netzanteil_returnPressed()
 
     // Output GUI Mögliche Hosts
     ui->list_counted_hosts->setHtml(QString::number(A.get_counted_hosts()));
+
+
+    ui->list_von->setHtml(A.get_dez_conv_first_host());
+
+    ui->list_bis->setHtml(A.get_dez_conv_last_host());
 }

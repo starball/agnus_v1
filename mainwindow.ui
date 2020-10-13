@@ -412,6 +412,88 @@ border-radius: 3px;</string>
       <string>Eingabe:</string>
      </property>
     </widget>
+    <widget class="QLabel" name="lbl_Von">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>330</y>
+       <width>180</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(80, 250, 123);</string>
+     </property>
+     <property name="text">
+      <string>Von:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_Bis">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>380</y>
+       <width>180</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(80, 250, 123);</string>
+     </property>
+     <property name="text">
+      <string>Bis:</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="list_von">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>330</y>
+       <width>180</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(34, 34, 34);
+background-color:rgb(202, 202, 202);
+border-radius: 3px;</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="list_bis">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>380</y>
+       <width>180</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(34, 34, 34);
+background-color:rgb(202, 202, 202);
+border-radius: 3px;</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

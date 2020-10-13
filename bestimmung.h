@@ -44,6 +44,8 @@ public:
     QString get_dez_conv_subnet_mark();
     QString get_dez_conv_inv_subnet_mask();
     QString get_dez_conv_braodcast();
+    QString get_dez_conv_first_host();
+    QString get_dez_conv_last_host();
 
     void fill_inv_subnet_mask();
     QString get_inv_subnet_mask();
@@ -67,6 +69,10 @@ private:
     QString broadcast;
 
     QString dez_conv;
+
+    QString first_host;
+    QString last_host;
+
 
     int array[4];
     int array_size;
