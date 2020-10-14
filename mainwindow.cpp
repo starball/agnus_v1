@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->lbl_counted_hosts->setToolTip("<p style='color: #111;'>Ohne Net ID / Broadcast</p>");
 }
 
 MainWindow::~MainWindow()
@@ -19,7 +20,6 @@ void MainWindow::on_ln_edt_netzanteil_returnPressed()
     // Input GUI IP-Adresse / Netzanteil
     QString u_eingabe = ui->ln_edt_ip->text();
     int u_netzanteil = ui->ln_edt_netzanteil->text().toInt();
-
 
     bestimmung A;
     A.set_ip_adresse(u_eingabe);
@@ -42,7 +42,9 @@ void MainWindow::on_ln_edt_netzanteil_returnPressed()
     ui->list_counted_hosts->setHtml(QString::number(A.get_counted_hosts()));
 
 
+    // Output GUI First Host "Von:"
     ui->list_von->setHtml(A.get_dez_conv_first_host());
 
+    // Output GUI Last Host "Bis:"
     ui->list_bis->setHtml(A.get_dez_conv_last_host());
 }

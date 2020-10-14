@@ -73,7 +73,6 @@ private:
     QString first_host;
     QString last_host;
 
-
     int array[4];
     int array_size;
 

@@ -191,6 +191,9 @@ border-radius: 3px;</string>
        <pointsize>15</pointsize>
       </font>
      </property>
+     <property name="whatsThis">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
      <property name="styleSheet">
       <string notr="true">color:rgb(80, 250, 123);</string>
      </property>
