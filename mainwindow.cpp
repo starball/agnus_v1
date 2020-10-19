@@ -26,6 +26,8 @@ void MainWindow::on_ln_edt_netzanteil_returnPressed()
     A.set_netzanteil(u_netzanteil);
     A.output();
 
+    // Would you like to stay at one language in your comments???
+
     // Output GUI Net ID:
     ui->list_net_id->setHtml(A.get_dez_conv_net_id());
 

@@ -8,10 +8,11 @@
 class bestimmung
 {
 public:
+// there is a refactor->renaming support in every IDE, use it wisely ;)
     void set_ip_adresse(QString adresse);
     QString get_ip_adresse();
 
-    void splitter();
+    void splitter();  // of what?
     void to_array(int block, int array_index);
 
     int get_array(int index);
@@ -56,7 +57,7 @@ public:
     void count_hosts();
     int get_counted_hosts();
 
-private:
+private:  // can you explain, why you have chosen "private" for this?
     QString ip_adresse;
     QString bin_out[4];
     QString total_bin[32];
